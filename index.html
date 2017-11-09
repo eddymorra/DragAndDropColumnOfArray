@@ -5,7 +5,80 @@
     <title>draggable-example</title>
   </head>
   <body>
-    <div id="app"></div>
+      <div class="topbar">
+          <h1>Titre du site</h1>
+      </div>
+  
+      <div class="menugauche">
+          <ul>
+              <li>Item menu 1</li>
+              <li>Item menu 2</li>
+              <li>Item menu 3</li>
+              <li>Item menu 4</li>
+              <li>Item menu 5</li>
+              <li>Item menu 6</li>
+              <li>Item menu 7</li>
+              <li>Item menu 8</li>
+              <li>Item menu 9</li>
+              <li>Item menu 0</li>
+              <li>Item menu 10</li>
+              <li>Item menu 11</li>
+              <li>Item menu 12</li>
+              <li>Item menu 13</li>
+              <li>Item menu 14</li>
+              <li>Item menu 15</li>
+              <li>Item menu 16</li>
+              <li>Item menu 17</li>
+              <li>Item menu 18</li>
+              <li>Item menu 19</li>
+              <li>Item menu 20</li>
+              <li>Item menu 21</li>
+              <li>Item menu 22</li>
+              <li>Item menu 23</li>
+              <li>Item menu 24</li>
+              <li>Item menu 25</li>
+              <li>Item menu 26</li>
+              <li>Item menu 27</li>
+              <li>Item menu 28</li>
+              <li>Item menu 29</li>
+              <li>Item menu 30</li>
+              <li>Item menu 31</li>
+              <li>Item menu 32</li>
+              <li>Item menu 33</li>
+              <li>Item menu 34</li>
+              <li>Item menu 35</li>
+              <li>Item menu 36</li>
+              <li>Item menu 37</li>
+              <li>Dernier Item du menu</li>
+          </ul>
+      </div>
+  
+      <div class="corps">
+        <div class="incorps">
+          <div id="app"></div>
+          <div class="btnbtot1">Remonter en haut du tableau</div>
+        </div>
+      </div>
+  
+      <div class="btnbtot2">Remonter en haut du tableau</div>
+  
+      <script>
+          function goToTop() {
+              document.querySelector('.corps').scrollTo(0, 0);
+          }
+  
+          document.querySelector('.btnbtot1').addEventListener('click', function() {goToTop()});
+          document.querySelector('.btnbtot2').addEventListener('click', function() {goToTop()});
+  
+          document.querySelector('.corps').addEventListener('scroll', function() {
+            if(document.querySelector('.corps').scrollTop < 10) {
+                document.querySelector('.btnbtot2').style.display = "none";
+            } else {
+                document.querySelector('.btnbtot2').style.display = "block";
+            }
+          });
+      </script>
+    
     <!-- built files will be auto injected -->
   </body>
 </html>
